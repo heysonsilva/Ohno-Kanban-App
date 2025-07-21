@@ -1,0 +1,105 @@
+# Kanban Board App
+
+Um aplicativo web simples para gerenciamento de tarefas em estilo Kanban, voltado para equipes de desenvolvimento.
+
+---
+
+## 🚀 Visão Geral
+
+Este projeto permite criar quadros Kanban personalizados, com colunas e cards de tarefas que podem ser movidos via drag-and-drop. Ideal para organizar fluxos de trabalho, acompanhar status de atividades e colaborar de forma visual.
+
+### Funcionalidades Principais
+
+* **CRUD de Colunas**: adicionar, renomear e remover colunas.
+* **CRUD de Cards**: criar, editar e excluir cards de tarefa.
+* **Drag-and-Drop**: reorganizar cards entre colunas usando SortableJS.
+* **Filtragem e Busca**: localizar cards por texto.
+* **Persistência Local**: armazenamento de dados no LocalStorage do navegador.
+* **Tema Claro/Escuro**: alternar visualização e salvar preferência.
+* **Responsividade**: layout adaptável para desktops e dispositivos móveis.
+* **Acessibilidade**: suporte a ARIA e navegação por teclado.
+
+---
+
+## 📁 Estrutura de Pastas
+
+```
+kanban-app/
+├── index.html          # Estrutura da página
+├── css/
+│   └── styles.css      # Estilos e variáveis de tema
+├── js/
+│   ├── kanban.js       # Lógica principal do Kanban
+│   └── storage.js      # Funções de armazenamento (LocalStorage)
+└── assets/
+    └── icons/          # Ícones SVG utilizados
+```
+
+---
+
+## ⚙️ Pré-requisitos
+
+* Navegador moderno com suporte a ES6.
+* Conexão à internet apenas para dependências de CDN (opcional).
+
+---
+
+## 📦 Instalação
+
+1. Faça o clone deste repositório:
+
+   ```bash
+   git clone https://github.com/seu-usuario/kanban-app.git
+   cd kanban-app
+   ```
+
+2. Abra o arquivo `index.html` no seu navegador:
+
+   * Duplo clique no arquivo ou use um servidor local, por exemplo:
+
+     ```bash
+     npx http-server .
+     ```
+
+---
+
+## 🚴 Uso
+
+1. **Criar Coluna**: clique em "Nova Coluna", digite o nome e confirme.
+2. **Adicionar Card**: dentro de uma coluna, clique em "+ Card" e insira a descrição.
+3. **Mover Card**: arraste o card para outra coluna.
+4. **Editar/Excluir**: use os botões de lápis e lixeira no card.
+5. **Filtrar/Buscar**: digite termos no campo de busca para filtrar cards.
+6. **Tema**: no header, alterne entre claro e escuro.
+
+---
+
+## 🛠️ Tecnologias
+
+* HTML5
+* CSS3 (Flexbox, Grid, variáveis CSS)
+* JavaScript (ES6+)
+* [SortableJS](https://github.com/SortableJS/Sortable) para drag-and-drop
+
+---
+
+## 📓 Referências e Inspiração
+
+* Padrões de design do Trello e Jira
+* Implementação de Kanban em Vanilla JS
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
+
+## ✍️ Contribuições
+
+Contribuições são bem-vindas! Abra issues para sugestões e pull requests para melhorias.
+
+---
+
+© 2025 Jaguar Studio. Todos os direitos reservados.
