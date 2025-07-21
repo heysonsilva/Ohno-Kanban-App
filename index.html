@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohno - Kanban Simplificado</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+     <div class="popup_area">
+        <div class="popup_newtask">
+          <p> Nova Tarefa </p>
+            <input type="text" class="input_newtask" placeholder="Nome da Tarefa">
+          </span>
+            <input type="text" class="input_descriptiontask" placeholder="Descrição da Tarefa">
+          </span>
+          <select class="input_selectcolumn">
+            <option value="none">Selecione uma coluna</option>
+            <option value="0"> Backlog</option>
+            <option value="1">A Fazer</option>
+            <option value="2">Em Progesso</option>
+            <option value="3">Concluído</option>
+          </select>
+          <button class="btn button_createtask" id="button_createtask"> Criar Tarefa</button>
+          <button class="btn button_cancelcreatetask"> Cancelar </button>
+        </div>
+     </div>
+
+      
+    <header>
+      <h1>Ohno</h1>
+      <div class="header_buttons_group">
+        <button class="btn" id="newtask_btn">+ Nova Tarefa</button>
+        <button class="btn" id="newcolumn_btn">+ Nova Coluna</button>
+        <button class="btn" id="newboard_btn">+ Novo Quadro</button>
+      </div>
+    </header>
+    <main class="board">
+      <div class="sidebar">
+        <h2>aqui será a sidebar</h2>
+      </div>
+      <section class="column todo_column">
+        <div class="header_column">
+          <p>A Fazer</p>
+        </div>
+      </section>
+
+      <section class="column inprogress_column">
+        <div class="header_column">
+          <p>Em Progresso</p>
+        </div>
+      </section>
+
+      <section class="column done_column">
+        <div class="header_column">
+          <p>Concluído</p>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="js/app.js"></script>
+</html>
