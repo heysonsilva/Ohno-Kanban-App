@@ -21,12 +21,21 @@
             <option value="2">Em Progesso</option>
             <option value="3">Concluído</option>
           </select>
+          <div class="popup_buttons">
           <button class="btn button_createtask" id="button_createtask"> Criar Tarefa</button>
           <button class="btn button_cancelcreatetask"> Cancelar </button>
+          </div>
+        </div>
+        <div class="popup_newcolumn">
+          <h2>Nova Coluna</h2>
+          <input type="text" placeholder="Nome da coluna" id="columnName" />
+          <div class="popup_buttons">
+            <button class="btn_cancel">Cancelar</button>
+            <button class="btn_add">Adicionar</button>
+          </div>
         </div>
      </div>
 
-      
     <header>
       <h1>Ohno</h1>
       <div class="header_buttons_group">
@@ -37,23 +46,49 @@
     </header>
     <main class="board">
       <div class="sidebar">
-        <h2>aqui será a sidebar</h2>
+        <div class="card">
+          <p></p>
+        </div>
+        <div class="card">
+          <p></p>
+        </div>
+        <div class="card">
+          <p></p>
+        </div>
+        <div class="card">
+          <p></p>
+        </div>
+        <div class="card">
+          <p></p>
+        </div>
+        <div class="card">
+          <p></p>
+        </div>
+        <div class="card">
+          <p></p>
+        </div>
       </div>
       <section class="column todo_column">
         <div class="header_column">
           <p>A Fazer</p>
+          <span>🟢</span>
         </div>
       </section>
 
       <section class="column inprogress_column">
         <div class="header_column">
           <p>Em Progresso</p>
+          <span>🟠</span>
+        </div>
+        <div class="card">
+          <p> Criar banco de dados</p>
         </div>
       </section>
 
       <section class="column done_column">
         <div class="header_column">
           <p>Concluído</p>
+          <span>🟣</span>
         </div>
       </section>
     </main>
