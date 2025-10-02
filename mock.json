@@ -1,0 +1,54 @@
+{
+  "columns": [
+    {
+      "name": "backlog",
+      "tasks": [
+        {
+          "id": 101,
+          "title": "Definir requisitos",
+          "description": "Reunir informações com o cliente para definir os requisitos iniciais",
+          "status": "backlog"
+        },
+        {
+          "id": 102,
+          "title": "Criar wireframe",
+          "description": "Esboçar a estrutura básica da aplicação",
+          "status": "backlog"
+        }
+      ]
+    },
+    {
+      "name": "todo",
+      "tasks": [
+        {
+          "id": 201,
+          "title": "Configurar ambiente",
+          "description": "Preparar ambiente de desenvolvimento com Node.js e dependências",
+          "status": "todo"
+        }
+      ]
+    },
+    {
+      "name": "inprogress",
+      "tasks": [
+        {
+          "id": 301,
+          "title": "Implementar login",
+          "description": "Desenvolver a tela de login e autenticação",
+          "status": "inprogress"
+        }
+      ]
+    },
+    {
+      "name": "done",
+      "tasks": [
+        {
+          "id": 401,
+          "title": "Criar repositório",
+          "description": "Repositório inicial no GitHub com README",
+          "status": "done"
+        }
+      ]
+    }
+  ]
+}

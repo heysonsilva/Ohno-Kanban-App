@@ -5,6 +5,7 @@
     --color-secondary: #ffffff;
     --color-neutral: #f5f6f8;
     --color-highlight: #4f46e5;
+    --color-contraste: #888888;
 }
 
 [data-theme="dark"] {
@@ -71,15 +72,17 @@ header h1 {
     position: relative;
 }
 
-.icon-theme {
+.themeIcon {
+    font-size: 22px;
+    font-weight:200;
+    margin-right: 15px;
     cursor: pointer;
-    transition: transform 0.5s ease;
-    text-shadow: 2px 2px 5px red;
-    width: 60px;
-    height: 30px;
+    color: var(--color-primary);
 }
-.icon-theme:hover {
-    transform: scale(1.07);
+
+.btn_changeTheme{
+    background-color: var(--color-secondary);
+    border: none;
 }
 
 .btn {
@@ -91,6 +94,8 @@ header h1 {
     cursor: pointer;
     position: relative;
 }
+
+/* ESTILIZAÇÃO DE BACKGROUND AO ATIVAR UM POP UP */
 
 .popup_area {
     background-color: rgba(0, 0, 0, 0.712);
@@ -119,13 +124,52 @@ header h1 {
     font-weight: bolder;
 }
 
+.popup_newboard {
+    background-color: var(--color-neutral);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 20rem;
+    border-radius: 0.5rem;
+    height: auto;
+    padding: 0rem 2rem;
+    padding-bottom: 1.5rem;
+    /* font-weight:; */
+}
+
+.btn_createnewboard {
+    padding: 0.5rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+.btn_createnewboard:hover {
+    background-color: #2d2985;
+}
+
+.btn_cancelnewboard {
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+    color: var(--color-primary);
+    font-weight: bold;
+    transition: background-color 0.5s ease;
+}
+
+.btn_cancelnewboard:hover {
+    background-color: var(--color-contraste);
+}
+
 
 .popup_newtask p {
     margin-top: 1rem;
 }
 
-.input_newtask,
-.input_descriptiontask {
+.input_taskname,
+.input_taskdescription {
     background-color: var(--color-contraste);
     color: var(--color-primary);
     padding: 0.4rem;
@@ -170,39 +214,11 @@ header h1 {
     background-color: var(--color-contraste);
 }
 
-
-.popup_newcolumn {
-    background-color: var(--color-neutral);
-    color: var(--color-primary);
-    padding: 2rem;
-    border-radius: 10px;
-    width: 19rem;
-    z-index: 1000;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.popup_newcolumn h2 {
-    margin-top: 0;
-}
-
-.popup_newcolumn input {
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 1rem;
-    border: 1px solid var(--color-contraste);
-    border-radius: 5px;
-    background-color: var(--color-contraste);
-    color: var(--color-primary);
-}
-
 .popup_buttons {
     display: flex;
     justify-content: flex-end;
     margin-top: 1.5rem;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
 .btn_cancel,
@@ -233,10 +249,14 @@ header h1 {
 .sidebar {
     width: 8rem;
     position: relative;
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
+    align-items: center;
     height: 80vh;
     background-color: var(--color-secondary);
     border-radius: 0.5rem;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar p {
@@ -248,6 +268,8 @@ header h1 {
     display: flex;
     gap: 0.7rem;
     overflow-x: auto;
+    height: auto;
+    width: auto;
     position: relative;
     padding: 0.5rem;
 }
@@ -256,13 +278,20 @@ header h1 {
     background: var(--color-secondary);
     border-radius: 0.5rem;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    width: 280px;
+    width: 16rem;
     height: max-content;
     position: relative;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     color: var(--color-neutral);
+}
+
+
+.column p {
+    margin-top: 0;
+    font-size: 0.8rem;
+    position: relative;
 }
 
 .header_column {
@@ -272,10 +301,8 @@ header h1 {
     justify-content: space-between;
 }
 
-.column p {
-    margin-top: 0;
+.header_column p {
     font-size: 1rem;
-    position: relative;
 }
 
 .task {
@@ -284,14 +311,54 @@ header h1 {
     position: relative;
 }
 
+
+/* DESIGN DOS CARDS */
 .card {
     background: var(--color-neutral);
     border-radius: 0.375rem;
-    padding: 1rem 0rem 0rem 1rem;
+    padding: 0.5rem 0rem 0rem 0.6rem;
     color: var(--color-primary);
-    display: flex;
+    display: inline-block;
     align-items: center;
     margin-bottom: 0.5rem;
+    height: auto;
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
     position: relative;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.card_task {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 0.4rem;
+}
+
+.card i {
+    position: relative;
+    width: 1rem;
+    color: var(--color-primary);
+    opacity: 0.8;
+}
+
+.card span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    font-size: 0.8rem;
+    color: var(--color-primary);
+}
+
+.title_task {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--color-primary);
+    position: relative;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }

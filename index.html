@@ -1,37 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="dark">
+<html lang="pt-BR" data-theme="ligth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ohno - Kanban Simplificado</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
+    <!-- BACKGROUND PARA POPUPS -->
      <div class="popup_area">
+
+        <!-- POPUP NOVA TASK -->
         <div class="popup_newtask">
           <p> Nova Tarefa </p>
-            <input type="text" class="input_newtask" placeholder="Nome da Tarefa">
-          </span>
-            <input type="text" class="input_descriptiontask" placeholder="Descrição da Tarefa">
-          </span>
+            <input type="text" class="input_taskname" placeholder="Nome da Tarefa">
+            <input type="text" class="input_taskdescription" placeholder="Descrição da Tarefa">
           <select class="input_selectcolumn">
             <option value="none">Selecione uma coluna</option>
-            <option value="0"> Backlog</option>
-            <option value="1">A Fazer</option>
-            <option value="2">Em Progesso</option>
-            <option value="3">Concluído</option>
+            <option value="backlog"> Backlog</option>
+            <option value="todo">A Fazer</option>
+            <option value="inprogress">Em Progesso</option>
+            <option value="done">Concluído</option>
           </select>
           <div class="popup_buttons">
           <button class="btn button_createtask" id="button_createtask"> Criar Tarefa</button>
           <button class="btn button_cancelcreatetask"> Cancelar </button>
           </div>
         </div>
-        <div class="popup_newcolumn">
-          <h2>Nova Coluna</h2>
-          <input type="text" placeholder="Nome da coluna" id="columnName" />
+
+        <div class="popup_newboard">
+          <h4> Novo Quadro </h4>
+          <p> O quadro atual será excluído, deseja criar um novo quadro?</p>
           <div class="popup_buttons">
-            <button class="btn_cancel">Cancelar</button>
-            <button class="btn_add">Adicionar</button>
+            <button class="btn btn_createnewboard"> Sim </button>
+            <button class="btn btn_cancelnewboard"> Não </button>
           </div>
         </div>
      </div>
@@ -40,11 +43,15 @@
       <h1>Ohno</h1>
       <div class="header_buttons_group">
         <button class="btn" id="newtask_btn">+ Nova Tarefa</button>
-        <button class="btn" id="newcolumn_btn">+ Nova Coluna</button>
         <button class="btn" id="newboard_btn">+ Novo Quadro</button>
+        <button class="btn_changeTheme"> <i class="fa-regular fa-moon themeIcon"></i></button>
       </div>
     </header>
+
+    <!-- CORPO DA PÁGINA -->
     <main class="board">
+
+      <!-- BARRA LATERAL -->
       <div class="sidebar">
         <div class="card">
           <p></p>
@@ -52,40 +59,39 @@
         <div class="card">
           <p></p>
         </div>
-        <div class="card">
-          <p></p>
-        </div>
-        <div class="card">
-          <p></p>
-        </div>
-        <div class="card">
-          <p></p>
-        </div>
-        <div class="card">
-          <p></p>
-        </div>
-        <div class="card">
-          <p></p>
-        </div>
       </div>
-      <section class="column todo_column">
+
+      <!-- COLUNA 1 -->
+
+      <section class="column backlog">
+        <div class="header_column">
+          <p>Backlog</p>
+          <span>🔵</span>
+        </div> 
+
+      </section>
+
+      <!-- COLUNA 2 -->
+
+      <section class="column todo">
         <div class="header_column">
           <p>A Fazer</p>
           <span>🟢</span>
         </div>
       </section>
 
-      <section class="column inprogress_column">
+      <!-- COLUNA 3 -->
+
+      <section class="column inprogress">
         <div class="header_column">
           <p>Em Progresso</p>
           <span>🟠</span>
         </div>
-        <div class="card">
-          <p> Criar banco de dados</p>
-        </div>
       </section>
 
-      <section class="column done_column">
+      <!-- COLUNA 4 -->
+
+      <section class="column done">
         <div class="header_column">
           <p>Concluído</p>
           <span>🟣</span>
@@ -93,5 +99,5 @@
       </section>
     </main>
   </body>
-  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
 </html>
