@@ -1,5 +1,3 @@
-// const { createElement } = require("react")
-
 console.log("its running bro :D")
 
 function newTaskPopup() {
@@ -118,7 +116,7 @@ function crateNewTask() {
     let inputColumn = document.querySelector(".input_selectcolumn").value
     console.log(inputColumn)
 
-    if ((!inputName) || (!inputColumn || "none") || (!inputDescription)) {    
+    if ((!inputName) || (!inputColumn == "none") || (!inputDescription)) {    
         window.alert("Preencha Todos os Campos para Prosseguir")
     } else {
         const columnhtml = document.getElementsByClassName(inputColumn)[0]
@@ -138,6 +136,7 @@ function crateNewTask() {
         cardTask.appendChild(span)
         cardTask.appendChild(p)
         columnhtml.appendChild(cardTask)
+
         closeTaskPopup()
     }
 }
